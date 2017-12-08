@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        
+        <!--Don't forget to fill these out!-->
+        <title>Splatware Checkout</title>
+        <meta name="description" content="Fill out purchase information." />
+        
+        
+        <!--Links to the main Style Sheet-->
+        <link href="../style.css" rel="stylesheet" type="text/css" />
+
+        <!--Links to Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+
+        <!--Links to Font-Awesome css-->
+        <link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <!--Links to Webfont-->
+        <link rel="stylesheet" href="../stylesheet.css" type="text/css" charset="utf-8" />
+
+        <!--Links to a modernizer JavaScript file that fixes a lot of issues with old browsers-->
+        <script src="../js/modernizr.js"></script>
+        
+        <!--Makes the site so it won't scale down on small devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+
+    <body>
+
+        <div class="cart-overlay" id="overlay"><div id="contentWrap"></div>
+        </div>
+
+        <div id="wrapper">
+
+            <header>
+                <a href="../index.html"><div id="logo"></div></a>
+                <ul id="nav">
+                    <li class="products"><a href="/products/products.html">PRODUCTS</a></li>
+                    <li class="info"><a href="#/">INFO</a></li>
+                    <li class="user"><a href="#/"><i class="profile"></i></a></li>
+                    <li class="cart"><a href="#/""><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+                </ul>
+            </header>
+
+            <div id="mobile-nav">
+                <a href="../index.html"><div id="logo"></div></a>
+                <div class="splatware">SPLATWARE</div>
+                <div id="mobile-menu"></div>
+            </div>
+
+            <div class="container">
+
+                <div class="label">
+                    <h1 class="title">CHECK OUT</h1>
+                    <div class="bar"></div>
+                </div>
+
+                <div class="customer">
+                    <p class="return">Returning Customer?</p>
+                    <p class="account"><a href="#/">Sign in to Account</a></p>
+                </div>
+
+                <section class="filing">
+                    <div class="billing open">
+                        <input id="bill-tab" type="checkbox">
+                        <label class="tab" for="bill-tab">Billing Information</label>
+                        <form class="open">
+                            <input id="name" type="text" value="Name">
+                            <input id="adrs-one" type="text" value="Address">
+                            <input id="adrs-two" type="text" value="Address 2 (Optional)">
+                            <input id="city" type="text" value="City">
+                            <input id="country" type="text" value="Country">
+                            <input id="zip" type="text" value="Zip">
+                            <input id="email" type="text" value="E-Mail">
+                        </form>
+                    </div>
+
+                    <div class="shipping closed">
+                        <input id="ship-tab" type="checkbox">
+                        <label class="tab" for="ship-tab">Shipping Address</label>
+                        <form class="closed">
+                            <input id="name" type="text" value="Name">
+                            <input id="adrs-one" type="text" value="Address">
+                            <input id="adrs-two" type="text" value="Address 2 (Optional)">
+                            <input id="city" type="text" value="City">
+                            <input id="country" type="text" value="Country">
+                            <input id="zip" type="text" value="Zip">
+                            <input id="email" type="text" value="E-Mail">
+                        </form>
+                    </div>
+                </section>
+
+                <section class="filing">
+                    <div class="payment">
+                        <h4>Payment Method</h4>
+                        <form>
+                            <input id="cardholder" type="text" value="Cardholder Name">
+                            <input id="cardnumber" type="text" value="Card Number">
+                            <input id="type" type="text" value="VISA">
+                            <input id="expire" type="text" value="Expires">
+                            <input id="cvv" type="text" value="CVV*">
+                            <input id="promo" type="text" value="Promo Code">
+                        </form>
+                    </div>
+                </section>
+
+                <section class="filing">
+                    <h4>Total: $56.95</h4>
+                    <button id="order"><a href="#/">Complete Order</a></button>
+                    <button id="cancel"><a href="../products/products.html">Cancel Purchase</a></button>
+                </section>
+
+            </div>
+
+            <footer>
+                <img src="../images/footer_bar.svg" class="border">
+                <div class="flexfoot">
+                    <div class="info">
+                        <ul class="adrs">
+                            <li><strong>Granby Workshop Limited</strong></li>
+                            <li>15 Cairns Street</li>
+                            <li>Liverpool, LB 2UN</li>
+                        </ul>
+                        <ul class="contact">
+                            <li>info@granbyworkshop.co.uk</li>
+                            <li>+44 (0)151 727 5508</li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li>Products</li>
+                            <li>Info</li>
+                            <li>Press</li>
+                            <li>Employment</li>
+                            <li>FAQ</li>
+                        </ul>
+                    </div>
+                    <div class="news">
+                        <p>Subscribe to Newsletter</p>
+                        <form>
+                            <input type="text" value="email@contact.com">
+                        </form>
+                        <input class="subscribe" type="button" value="Subscribe">
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li><a href="#/"><i class="fa fa-facebook fa-2x"></i></a></li>
+                            <li><a href="#/"><i class="fa fa-twitter fa-2x"></i></a></li>
+                            <li><a href="#/"><i class="fa fa-instagram fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/actions.js"></script>
+
+</html>
