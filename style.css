@@ -93,25 +93,26 @@ header.home {
 }
 
 #logo {
-  content: url("images/logo.svg");
+  background: url("/images/logo.svg") no-repeat center;
   display: block;
   position: fixed;
   float: left;
   margin-top: 30px;
   margin-left: 60px;
   width: 65px;
+  height: 65px;
 }
 
 header.home #logo {
-	content: url('images/logo_white.svg');
+	background: url('/images/logo_white.svg') no-repeat center;
 }
 
 header.home #logo:hover {
-	content: url('images/logo_hover.svg');
+	background: url('/images/logo_hover.svg') no-repeat center;
 }
 
 #logo:hover {
-	content: url('images/logo_hover.svg');
+	background: url('/images/logo_hover.svg') no-repeat center;
 }
 
 ul#nav {
@@ -151,8 +152,9 @@ header.home #nav li a {
 }
 
 #nav li.user .profile{
-	content: url(images/profile.svg);
+	background: url(images/profile.svg) no-repeat center;
 	height: 25px;
+	width: 25px;
 	margin-bottom: -5px;
 }
 
@@ -227,8 +229,9 @@ blockquote h2{
 }
 
 .label .bar {
-	content: url(images/title_bar.svg);
+	background: url(images/title_bar.svg) no-repeat center;
 	width: 199px;
+	height: 20px;
 }
 
 section.sets, section.cups, section.plates {
@@ -355,7 +358,7 @@ section.filing input#bill-tab:checked ~ section.filing div form, section.filing 
 	max-height: 415px;
 }
 
-section.filing label.tab {
+section.filing label.tab, section.filing h4 {
 	font-size: 2em;
 	font-weight: 700;
 	color: #597D9C;
