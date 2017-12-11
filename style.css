@@ -49,9 +49,8 @@ img {
 	display: block; /*removes tiny space added in some browsers below images */
 }
 
-html {
+html, body {
 	font-family: 'Lato', sans-serif;
-    font-size:12pt; /* Adjust for REM */
 	line-height: 1;
 }
 
@@ -179,21 +178,18 @@ header.home #nav li.user .profile {
 
 /* Home */
 
-#homepage{
+#wrapper.homepage{
 	background: url(images/homepage.png) no-repeat center 100%;
-	height: 100vh;/*--788px--*/
-	width: 100vw;
-	background-size: cover;
+	height: 100vh;
+	max-width: 100vw;
 }
 
 blockquote {
-	float: left;
 	position: absolute;
-	margin-top: 450px;
-	height: 175px;
 	width: 40%;
-	margin-left: 56%;
 	text-align: right;
+	bottom: 6em;
+	right: 15%;
 }
 
 blockquote h1{
@@ -201,8 +197,6 @@ blockquote h1{
 	font-family: 'skrovafill_solid';
 	font-size: 5em;
 }
-
-
 
 blockquote h2{
 	color: white;
@@ -242,23 +236,26 @@ section.sets, section.cups, section.plates {
 }
 
 section.left {
+	display: inline-block;
 	float: left;
 	margin-left: -100px;
 }
 
 section.right {
+	display: inline-block;
 	float: right;
-	margin-right: -70px;
 }
 
 section.left img {
 	width: 52%;
 	float: left;
+	display: inline-block;
 }
 
 section.right img {
 	width: 30%;
 	float: right;
+	display: inline-block;
 }
 
 section .descript {
@@ -425,7 +422,7 @@ section.filing div form input#cvv {
 	margin-left: 15px;
 }
 
-button {
+section.filing a {
 	background: transparent;
 	background-color: #E6E7E8;
 	border: 2px solid white;
@@ -436,11 +433,11 @@ button {
 	display: inline-flex;
 }
 
-button:hover {
+section.filing a:hover {
 	border: 2px solid #3B4045;
 }
 
-button a {
+section.filing a {
 	color: #3B4045;
 	padding: 10px 25px;
 }
@@ -881,7 +878,25 @@ div.contentWrap {
 	width: 100%;
 }
 
+#popup #buttons a {
+	background: transparent;
+	background-color: #E6E7E8;
+	border: 2px solid white;
+	border-radius: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5em;
+	color: #3B4045;
+	display: inline-flex;
+}
 
+#popup #buttons a:hover {
+	border: 2px solid #3B4045;
+}
+
+#popup #buttons a {
+	color: #3B4045;
+	padding: 10px 25px;
+}
 
 #popup #purchase-info {
 	margin-top: 20px;
@@ -926,7 +941,6 @@ footer {
 
 footer .flexfoot {
 	padding-bottom: 30px;
-	margin-left: 5%;
 	width: 100%;
 	display: flex;
 	flex-flow: row;
@@ -937,7 +951,7 @@ footer .flexfoot {
 footer img.border {
 	display: inline;
 	width: 414px;
-	margin-left: 62%;
+	float: right;
 	margin-bottom: 50px;
 }
 
@@ -1071,6 +1085,11 @@ footer .flexfoot .social ul li a {
 		margin-top: 7em;
 	}
 
+	/* Footer */
+
+	footer {
+		display: none;
+	}
 
 }
 
