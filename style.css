@@ -465,10 +465,12 @@ section.dish{
 
 #mainimage{
 	border: none;
-	width: 99%;
-	height: 445px;
+	width: 100%;
+	height: 0;
+	padding-top: 82%;
 	background: url(images/main_set.png) no-repeat center 100%;
 	float: left;
+	background-size: contain;
 } 
 
 #thumbs{
@@ -482,40 +484,48 @@ section.dish{
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-
+	flex-flow: row wrap;
 	-webkit-flex-flow: row wrap;
 	justify-content: space-around;
 }
 
 #plate1{
 	background: url(images/plate1.png)no-repeat center 100%;
+	background-size: contain;
 	height: 111px;
 	width: 111px;
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	flex-grow: 2;
 }
 
 #plate2{
 	background: url(images/plate2.png)no-repeat center 100%;
+	background-size: contain;
 	height: 111px;
 	width: 111px;
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	flex-grow: 2;
 }
 
 #cup1{
 	background: url(images/cup1.png)no-repeat center 100%;
+	background-size: contain;
 	height: 111px;
 	width: 111px;
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	flex-grow: 2;
 }
 
 #cup2{
 	background: url(images/cup2.png)no-repeat center 100%;
+	background-size: contain;
 	height: 111px;
 	width: 111px;
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	flex-grow: 2;
 }
 
@@ -593,16 +603,13 @@ section.text .descript p.setpg strong {
 }
 
 #amount{
-	border: none;
 	font-family: 'Lato', sans-serif;
 	font-size: .875em;
 	font-weight: 700;
 	width: 150px;
-	height: 34px;
 }
 
 #amount .quantity {
-	float: left;
 	font-weight: 700;
 	font-size: 1.35em;
 	color: #3B4045;
@@ -655,14 +662,16 @@ button#addtocart{
 	background: transparent;
 	background-color: #E6E7E8;
 	color: #3B4045;
+	border: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 button#addtocart:hover {
 	cursor: pointer;
+	border: 2px solid #3B4045;
 }
 
 button#addtocart div.label {
@@ -1043,6 +1052,37 @@ footer .flexfoot .social ul li a {
 	color: #6D6E71;
 }
 
+/* Tablet */
+
+@media screen and (max-width: 810px) {
+
+	/* Home */
+
+	blockquote {
+		font-size: 75%;
+		width: 70%;
+		text-align: left;
+		left: 5%;
+		bottom: 12em;
+	}
+
+	blockquote h2 {
+		font-size: 2em;
+	}
+
+	blockquote h1 {
+		font-size: 4em;
+	}
+
+	/* Sets */
+
+	#plate1, #plate2, #cup1, #cup2 {
+		width: 22%;
+		height: 0;
+		padding-top: 22%;
+	}
+}
+
 /* Mobile*/
 
 @media screen and (max-width: 620px) {
@@ -1060,32 +1100,158 @@ footer .flexfoot .social ul li a {
 		justify-content: space-around;
 		position: fixed;
 		width: 100%;
-		padding-top: 20px;
+		background-color: #85c3cb;
+		z-index: 100;
+		padding-bottom: 10px;
 	}
 
 	#mobile-nav a #logo {
 		position: inherit;
 		margin-left: 0;
-		margin-top: 0;
+		margin-top: 10px;
+		background: url('images/logo_white.svg') no-repeat center;
+		width: 50px;
+		height: 50px;
 	}
 
 	#mobile-nav .splatware {
 		font-family: "skrovafill_solid", sans-serif;
-		font-size: 3em;
-		color: #597D9C;
+		font-size: 2em;
+		color: white;
+		margin-top: 20px;
 	}
 
 	#mobile-nav #mobile-menu {
 		font-size: 2em;
-		content: url('images/mobile-blue.svg');
-		height: 40px;
-		padding-top: 7px;
+		background: url('images/mobile-white.svg') no-repeat center;
+		height: 30px;
+		width: 30px;
+		margin-top: 20px;
+
 	}
 
-	/* Checkout Page */
+	/* Products Page */
+
+	#mobile-masonry {
+		margin-top: -4em;
+		padding-bottom: 5em;
+	}
 
 	.container .label {
 		margin-top: 7em;
+		margin-left: 5%;
+	}
+
+	.label h1.title {
+		margin-left: 25px;
+	}
+
+	section.sets {
+		margin-top: 2em;
+	}
+
+	section.left img {
+		width: 85%;
+	}
+
+	section.right img {
+		width: 75%;
+	}
+
+	section.left .descript {
+		width: 65%;
+		margin-top: 50px;
+	}
+
+	section.right .descript {
+		width: 80%;
+		margin-top: 50px;
+		text-align: left;
+	}
+
+	/* Sets Page */
+
+	section.dish {
+		float: unset;
+		padding-top: 4em;
+		width: 100%;
+		height: auto;
+	}
+
+	section.text {
+		width: 90%;
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+
+	#leftside {
+		width: 52%;
+	}
+
+	#rightside {
+		padding-left: 0%;
+		float: right;
+	}
+
+	#plate1, #plate2, #cup1, #cup2 {
+		width: 35%;
+		height: 0;
+		padding-top: 35%;
+		background-size: contain;
+	}
+
+	#amount {
+		font-size: 138%;
+	}
+
+	button#addtocart {
+		width: 98%;
+		margin-top: 1em;
+	}
+
+	/* Cart & Payment */
+
+	#popup {
+		width: 73%;
+		margin-top: 23em;
+		padding: 1.5em 1.5em;
+	}
+
+	#popup #buttons {
+		flex-flow: row wrap;
+		font-size: 80%;
+	}
+
+	/* Checkout */
+
+	section.filing {
+		padding-left: 0;
+	}
+
+	section.filing div {
+		width: 95%;
+	}
+
+	section.filing label.tab {
+		font-size: 1.5em;
+	}
+
+	section.filing .billing form {
+		margin-bottom: 20px;
+	}
+
+	section.filing .payment h4, section.filing h4 {
+		font-size: 1.5em;
+		padding-left: 6%;
+	}
+
+	section.filing a {
+		margin-left: 14%;
+		margin-bottom: 10px;
+	}
+
+	section.filing a#cancel {
+		margin-bottom: 50px;
 	}
 
 	/* Footer */

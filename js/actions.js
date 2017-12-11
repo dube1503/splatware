@@ -50,5 +50,10 @@ $(function() {
         $(".cup .item-price").text("$"+cupPrice);
         $("#total-price .final").text("$"+(Math.floor((cupPrice+platePrice+12.97)*100)/100));
     });
+
+    if ($(window).width() < 430) {
+        console.log($(window).width());
+        $('#mobile-masonry').load('../products/products.html .container');
+    };
             
 });
