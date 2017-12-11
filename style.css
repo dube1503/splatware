@@ -184,6 +184,7 @@ header.home #nav li.user .profile {
 	background: url(images/homepage.png) no-repeat center 100%;
 	height: 100vh;
 	max-width: 100vw;
+	background-size: cover;
 }
 
 blockquote {
