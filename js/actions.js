@@ -7,14 +7,14 @@ $(function() {
  
     cart.click(function() {
         if (overlay.is(':empty')) {
-            overlay.load('/payment/cart.html #background-overlay');
+            overlay.load('../payment/cart.html #background-overlay');
         };
 
     });
 
     addCart.click(function() {
         if (overlay.is(':empty')) {
-            overlay.load('/payment/cart.html #background-overlay');
+            overlay.load('../payment/cart.html #background-overlay');
         };
 
     });
@@ -25,7 +25,7 @@ $(function() {
 
     order.click(function() {
         if (overlay.is(':empty')) {
-            overlay.load('/payment/purchase.html #background-overlay');
+            overlay.load('../payment/purchase.html #background-overlay');
         };
     });
 
