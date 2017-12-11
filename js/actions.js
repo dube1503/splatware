@@ -53,7 +53,7 @@ $(function() {
 
     if ($(window).width() < 430) {
         console.log($(window).width());
-        $('#mobile-masonry').load('../products/products.html .container');
+        $('#mobile-masonry').load('products/products.html .container');
     };
             
 });
